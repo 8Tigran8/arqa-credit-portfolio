@@ -71,6 +71,7 @@ for(const [pkg,path]of [['vega','build/vega.min.js'],['vega-lite','build/vega-li
  // Preserve upstream licensing in distributed JS assets.
  for(const license of ['LICENSE','LICENSE.txt','LICENSE.md']){try{await fs.copyFile('node_modules/'+pkg+'/'+license,'dashboard/vendor/'+pkg+'.LICENSE');break}catch{}}
 }
+for(const pkg of ['vega','vega-lite','vega-embed'])await fs.access('dashboard/vendor/'+pkg+'.LICENSE');
 const numRows=first.map(r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[k,k==='report_date'?v:Number(v)])));
 const sliceRows=breakdowns.map(r=>Object.fromEntries(Object.entries(r).map(([k,v])=>[k,['report_date','dimension','category'].includes(k)?v:Number(v)])));
 const schemaVL='https://vega.github.io/schema/vega-lite/v5.json';
