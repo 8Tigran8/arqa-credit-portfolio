@@ -9,7 +9,7 @@ Authority: original public assignment https://jobs.arqa.cc/bi, reviewed 9 Novemb
 | README run instructions and figures | Reproducible commands and both dates | README.md | PASS: README exact figures and3conclusions |
 | Three risk-committee conclusions | Observed quantified findings; no invented causality | README.md | PASS: README exact figures and3conclusions |
 | Agent instructions actually used | AGENTS.md and honest error/correction note | AGENTS.md, README.md | PASS: README honest Codex execution note |
-| Public repository link | Authorized GitHub/GitLab/Bitbucket repository | Not published | Requires user authorization |
+| Public repository link | Authorized public GitHub repository | https://github.com/8Tigran8/arqa-credit-portfolio | PASS: published under8Tigran8 afterspecificapproval |
 | Dashboard screenshot in README | Screenshot from actual rendered page | dashboard/screenshot.png | PASS: actual rendered3SVG, nohorizontaloverflow |
 | How figures were checked | Independent Decimal oracle, SQL comparison, boundaries, quality gates | scripts/reference.py, scripts/build.mjs; outputs/verification.json | PASS:10PostgreSQLscenarios+146Decimalcomparisons |
 
