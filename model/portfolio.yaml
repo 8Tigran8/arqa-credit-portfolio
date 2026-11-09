@@ -1,0 +1,19 @@
+model: credit_portfolio
+source: reporting.v_risk_facts
+dimensions:
+  - {name: report_date, column: report_date, type: date, label: Дата среза}
+  - {name: sector, column: sector, type: string, label: Отрасль}
+  - {name: program, column: program, type: string, label: Программа}
+  - {name: group_id, column: group_id, type: string, label: Связанная группа}
+measures:
+  - {name: portfolio_kzt, column: principal_kzt, type: sum, format: ",.2f", label: Портфель KZT}
+  - {name: par30_kzt, column: par30_kzt, type: sum, format: ",.2f", label: PAR30 числитель}
+  - {name: par90_kzt, column: par90_kzt, type: sum, format: ",.2f", label: PAR90 числитель}
+  - {name: npl_kzt, column: npl_kzt, type: sum, format: ",.2f", label: NPL числитель}
+  - {name: provisions_kzt, column: provision_kzt, type: sum, format: ",.2f", label: Провизии KZT}
+  - {name: loan_count, column: loan_id, type: count, format: ",d", label: Количество кредитов}
+# Ratios are SUM(numerator)/SUM(principal_kzt), never AVG(row percentages).
+# The required simple sum/avg/count contract has no ratio or top-N measure type.
+# Explicit presentation calculations live in v_metrics / v_breakdowns.
+# Top10: group total first, rank within each report_date, sum first10 / total.
+

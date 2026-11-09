@@ -1,0 +1,166 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "report_date": "2026-09-01",
+        "dimension": "program",
+        "category": "Инвестиционное кредитование",
+        "portfolio_kzt": 120900947920.905,
+        "par30": 0.13763804293700393,
+        "par90": 0.06539171726115545,
+        "npl": 0.12286875959655258,
+        "provisions_kzt": 9274053169.923784
+      },
+      {
+        "report_date": "2026-09-01",
+        "dimension": "program",
+        "category": "Лизинг техники",
+        "portfolio_kzt": 147754752546.006,
+        "par30": 0.10257477900496598,
+        "par90": 0.07291930206287797,
+        "npl": 0.1100346965734435,
+        "provisions_kzt": 9838397102.8143
+      },
+      {
+        "report_date": "2026-09-01",
+        "dimension": "program",
+        "category": "Пополнение оборотных средств",
+        "portfolio_kzt": 107477673628.79,
+        "par30": 0.12978747008165534,
+        "par90": 0.04927472902111533,
+        "npl": 0.11654517620500175,
+        "provisions_kzt": 7991317887.36145
+      },
+      {
+        "report_date": "2026-09-01",
+        "dimension": "program",
+        "category": "Экспортное финансирование",
+        "portfolio_kzt": 122019854598.872,
+        "par30": 0.11702004411311188,
+        "par90": 0.05836597126508817,
+        "npl": 0.12617829162047148,
+        "provisions_kzt": 9408490906.199354
+      },
+      {
+        "report_date": "2026-10-01",
+        "dimension": "program",
+        "category": "Инвестиционное кредитование",
+        "portfolio_kzt": 116592544593.383,
+        "par30": 0.11460118453568184,
+        "par90": 0.04885235112997316,
+        "npl": 0.10681355606546034,
+        "provisions_kzt": 7958145093.49005
+      },
+      {
+        "report_date": "2026-10-01",
+        "dimension": "program",
+        "category": "Лизинг техники",
+        "portfolio_kzt": 143886096677.144,
+        "par30": 0.11776614366684438,
+        "par90": 0.0313068510118292,
+        "npl": 0.06798254440423505,
+        "provisions_kzt": 7337814233.61311
+      },
+      {
+        "report_date": "2026-10-01",
+        "dimension": "program",
+        "category": "Пополнение оборотных средств",
+        "portfolio_kzt": 104960631022.517,
+        "par30": 0.08405075183297468,
+        "par90": 0.04644914501135292,
+        "npl": 0.11263938587120059,
+        "provisions_kzt": 7197931763.70109
+      },
+      {
+        "report_date": "2026-10-01",
+        "dimension": "program",
+        "category": "Экспортное финансирование",
+        "portfolio_kzt": 119235498539.714,
+        "par30": 0.09159020551640992,
+        "par90": 0.05504632802867755,
+        "npl": 0.12139988011153176,
+        "provisions_kzt": 8677350317.5737
+      }
+    ]
+  },
+  "width": "container",
+  "height": 230,
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x"
+    },
+    "x": {
+      "field": "portfolio_kzt",
+      "type": "quantitative",
+      "title": "Остаток, KZT",
+      "axis": {
+        "format": ".2s"
+      }
+    },
+    "color": {
+      "field": "report_date",
+      "title": "Дата",
+      "scale": {
+        "range": [
+          "#a6bfd1",
+          "#10636b"
+        ]
+      }
+    },
+    "yOffset": {
+      "field": "report_date"
+    },
+    "tooltip": [
+      {
+        "field": "category",
+        "title": "Сегмент"
+      },
+      {
+        "field": "report_date",
+        "title": "Дата"
+      },
+      {
+        "field": "portfolio_kzt",
+        "title": "KZT",
+        "format": ",.2f"
+      },
+      {
+        "field": "par30",
+        "title": "PAR30",
+        "format": ".2%"
+      },
+      {
+        "field": "par90",
+        "title": "PAR90",
+        "format": ".2%"
+      },
+      {
+        "field": "npl",
+        "title": "NPL",
+        "format": ".2%"
+      },
+      {
+        "field": "provisions_kzt",
+        "title": "Провизии KZT",
+        "format": ",.2f"
+      }
+    ]
+  },
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

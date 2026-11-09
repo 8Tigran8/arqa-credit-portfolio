@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Две даты, доли взвешены по остатку KZT",
+  "data": {
+    "values": [
+      {
+        "date": "2026-09-01",
+        "metric": "PAR30",
+        "share": 0.12049406008283074
+      },
+      {
+        "date": "2026-09-01",
+        "metric": "PAR90",
+        "share": 0.062426243201990084
+      },
+      {
+        "date": "2026-09-01",
+        "metric": "NPL",
+        "share": 0.11850843611254334
+      },
+      {
+        "date": "2026-09-01",
+        "metric": "Top10 групп",
+        "share": 0.1704270508700768
+      },
+      {
+        "date": "2026-10-01",
+        "metric": "PAR30",
+        "share": 0.10326384047551972
+      },
+      {
+        "date": "2026-10-01",
+        "metric": "PAR90",
+        "share": 0.04464694627679072
+      },
+      {
+        "date": "2026-10-01",
+        "metric": "NPL",
+        "share": 0.10013577438463969
+      },
+      {
+        "date": "2026-10-01",
+        "metric": "Top10 групп",
+        "share": 0.17016799337343935
+      }
+    ]
+  },
+  "width": "container",
+  "height": 240,
+  "mark": {
+    "type": "line",
+    "point": true,
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "ordinal",
+      "title": "Дата среза",
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Доля портфеля",
+      "axis": {
+        "format": ".0%"
+      }
+    },
+    "color": {
+      "field": "metric",
+      "title": null
+    },
+    "tooltip": [
+      {
+        "field": "metric",
+        "title": "Метрика"
+      },
+      {
+        "field": "date",
+        "title": "Дата"
+      },
+      {
+        "field": "share",
+        "title": "Доля",
+        "format": ".2%"
+      }
+    ]
+  },
+  "config": {
+    "font": "Arial",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

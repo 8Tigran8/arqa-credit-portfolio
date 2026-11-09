@@ -1,0 +1,40 @@
+{
+  "engine": {
+    "version": "PostgreSQL 17.5 on aarch64-unknown-linux-gnu, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit"
+  },
+  "tests": [
+    "idempotent_reload",
+    "idempotent_views",
+    "source_quality_gates",
+    "DPD30_31_90_91",
+    "restructured_zeroDPD_isNPL_and_50pct",
+    "writtenoff_excluded",
+    "top10_groups_not_loans",
+    "missing_fx_blocks_export",
+    "conflicting_loan_blocks_export",
+    "conflicting_fx_blocks_export"
+  ],
+  "source_quality": [
+    {
+      "check_name": "conflicting_fx_keys",
+      "failures": "0"
+    },
+    {
+      "check_name": "conflicting_loan_keys",
+      "failures": "0"
+    },
+    {
+      "check_name": "missing_exact_date_fx",
+      "failures": "0"
+    }
+  ],
+  "postgres16_docker_tested": false,
+  "note": "Docker CLI sockets unavailable; all views and fixtures ran in actual PostgreSQL through PGlite. Native postgres16 run script also provided, not claimed executed.",
+  "independent_decimal_comparisons": 146,
+  "independent_decimal_result": "PASS",
+  "exact_duplicate_rows_removed": 60,
+  "screenshot_verified": true,
+  "browser_svg_charts": 3,
+  "browser_horizontal_overflow": false,
+  "browser_screenshot": "dashboard/screenshot.png"
+}
